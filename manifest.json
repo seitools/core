@@ -1,0 +1,15 @@
+{
+  "name": "SEI Tools Core",
+  "version": "1.0",
+  "description": "Base de Desenvolvimento de Extensões SEI",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://sei.mj.gov.br/*"],
+      "all_frames": true,
+      "js": ["main.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "manifest_version": 2
+}
