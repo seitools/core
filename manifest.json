@@ -1,15 +1,31 @@
 {
-  "name": "SEI Tools Core",
+  "manifest_version": 3,
+  "name": "SEI Tools Base",
   "version": "1.0",
   "description": "Base de Desenvolvimento de Extensões SEI",
-  "permissions": [],
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "native_resources",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "content_scripts": [
     {
+      "css": ["style.css"],
+      "js": ["preload.js"],
       "matches": ["https://sei.mj.gov.br/*"],
-      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
       "js": ["main.js"],
-      "css": ["style.css"]
+      "matches": ["https://sei.mj.gov.br/*"]
     }
-  ],
-  "manifest_version": 2
+  ]
 }

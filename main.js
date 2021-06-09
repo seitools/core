@@ -1,3 +1,5 @@
+//window.stop();
+
 function getMenuTree() {
   const navigate = (menu) => {
     let items = [...menu.getElementsByTagName('li')].reduce((result, item) => {
@@ -18,7 +20,16 @@ function getMenuTree() {
     }, [])
     return items;
   }
-  return navigate(document.getElementById('main-menu'))
+  return navigate(window.SEITools.document.getElementById('main-menu'))
+}
+
+function getUnits() {
+  return [...window.SEITools.document.getElementById('selInfraUnidades').options].map(option => {
+    return {
+      id: option.value,
+      name: option.text
+    }
+  });
 }
 
 function getTootipData(content) {
@@ -30,8 +41,8 @@ function getTootipData(content) {
 }
 
 function getProcesses() {
-  let received = [...document.getElementById('tblProcessosRecebidos').getElementsByTagName('tr')]
-  let generated = [...document.getElementById('tblProcessosGerados').getElementsByTagName('tr')]
+  let received = [...window.SEITools.document.getElementById('tblProcessosRecebidos').getElementsByTagName('tr')]
+  let generated = [...window.SEITools.document.getElementById('tblProcessosGerados').getElementsByTagName('tr')]
 
   const parseContent = (processes, type) => {
     return processes.reduce((result, item) => {
@@ -65,8 +76,8 @@ function getProcesses() {
 }
 window.seiTools = {
   menu: getMenuTree(),
+  units: getUnits(),
   processes: getProcesses()
 }
 
 console.log(window.seiTools)
-
