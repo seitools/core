@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "css": ["preload.css"],
-      "js": ["vue.min.js", "preload.js"],
+      "js": ["preload.js"],
       "matches": ["https://sei.mj.gov.br/*"],
       "run_at": "document_start"
     },
@@ -34,7 +34,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": [ "template.html"],
+      "resources": [ "template.html", "vue.min.js", "post.js"],
       "matches": ["https://sei.mj.gov.br/*"]
     }
   ]
