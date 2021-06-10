@@ -1,5 +1,3 @@
-window.stop();
-
 function getMenuTree() {
   const navigate = (menu) => {
     let items = [...menu.getElementsByTagName('li')].reduce((result, item) => {
@@ -79,5 +77,3 @@ window.seiTools = {
   units: getUnits(),
   processes: getProcesses()
 }
-
-console.log(window.seiTools)
