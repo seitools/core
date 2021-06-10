@@ -7,7 +7,7 @@
         },
         "condition": {
             "resourceTypes": ["script", "stylesheet"],
-            "regexFilter": "[^(seiTools=1)]$"
+            "regexFilter": "[^~]$"
         }
     }
 ]

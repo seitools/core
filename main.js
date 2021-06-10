@@ -1,4 +1,4 @@
-//window.stop();
+window.stop();
 
 function getMenuTree() {
   const navigate = (menu) => {
