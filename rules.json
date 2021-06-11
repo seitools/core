@@ -6,7 +6,8 @@
             "type": "block"
         },
         "condition": {
-            "resourceTypes": ["stylesheet"],
+            "domains": ["seis.mj.gov.br"],
+            "resourceTypes": ["script", "stylesheet"],
             "regexFilter": "[^~]$"
         }
     }

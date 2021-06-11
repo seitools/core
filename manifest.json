@@ -21,20 +21,20 @@
   "content_scripts": [
     {
       "css": ["preload.css"],
-      "js": ["preload.js"],
+      "js": ["src/js/preload.js"],
       "matches": ["https://sei.mj.gov.br/*"],
       "run_at": "document_start"
     },
     {
-      "js": ["main.js"],
       "css":  ["tailwind.min.css", "style.css"],
+      "js": ["src/js/onload.js"],
       "matches": ["https://sei.mj.gov.br/*"],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [ "template.html", "vue.min.js", "post.js"],
+      "resources": [ "template.html", "dist/postload.js"],
       "matches": ["https://sei.mj.gov.br/*"]
     }
   ]
