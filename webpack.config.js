@@ -1,5 +1,8 @@
 module.exports = {
-    mode: 'development',
+    mode: 'production',
+    node: {
+        global: false
+    },
     entry: {
         preload: './src/js/preload.js',
         onload: './src/js/onload.js',

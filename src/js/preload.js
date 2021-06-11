@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+    window.stop()
     window.SEITools = {
         document: document.cloneNode(true)
     }
