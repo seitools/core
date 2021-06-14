@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
         return script
     })
 
-    fetch(chrome.runtime.getURL('template.html')).then(r => r.text()).then(html => {
+    fetch(chrome.runtime.getURL('index.html')).then(r => r.text()).then(html => {
 
         document.write(html)    
         const scripts = [...document.documentElement.getElementsByTagName('script')]

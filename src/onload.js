@@ -77,3 +77,5 @@ window.seiTools = {
   units: getUnits(),
   processes: getProcesses()
 }
+
+console.log(window.seiTools)
