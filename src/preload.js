@@ -21,18 +21,12 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     fetch(chrome.runtime.getURL('index.html')).then(r => r.text()).then(html => {
-
-        document.write(html)    
-        const scripts = [...document.documentElement.getElementsByTagName('script')]
-
-
-        scripts.map(script => {
-            script.src = chrome.runtime.getURL(script.getAttribute('data-src'))
-            console.log(script.getAttribute('data-src'))
-            return script
+        document.write(html)
+        const script = document.documentElement.getElementsByTagName('script')[0]
+        script.src = chrome.runtime.getURL(script.getAttribute('data-src'))
+        script.addEventListener('load', () => {
+            window.postMessage('data', "*");
         })
-        
         document.body.style.display = 'block';
-        document.title = window.SEITools.document.title;
     });
 });
