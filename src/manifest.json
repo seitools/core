@@ -24,11 +24,6 @@
       "js": ["js/preload.min.js"],
       "matches": ["https://sei.mj.gov.br/*"],
       "run_at": "document_start"
-    },
-    {
-      "js": ["js/onload.min.js"],
-      "matches": ["https://sei.mj.gov.br/*"],
-      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [

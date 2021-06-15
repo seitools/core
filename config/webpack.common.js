@@ -11,8 +11,7 @@ module.exports = {
   // Where webpack looks to start building the bundle
   entry: {
     main: paths.src + '/index.js',
-    preload: paths.src + '/preload.js',
-    onload: paths.src + '/onload.js',
+    preload: paths.src + '/preload.js'
   },
 
   // Where webpack outputs the assets and bundles

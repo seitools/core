@@ -9,8 +9,8 @@ import { Table } from './components/Table'
 import { Card } from './components/Card'
 import { Pagination } from './components/Pagination'
 
-window.addEventListener("message", function(request) { 
-  console.log(request)
+window.addEventListener('message', function(message) { 
+  console.log(message.data)
 }, true);
 
 class App extends Component {
